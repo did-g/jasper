@@ -120,6 +120,9 @@ extern "C" {
 /******************************************************************************\
 *
 \******************************************************************************/
+#if defined( _MSC_VER ) && !defined( __cplusplus )
+# define inline __inline
+#endif // defined( _MSC_VER ) && !defined( __cplusplus )
 
 JAS_ATTRIBUTE_DISABLE_USAN
 inline static int jas_int_asr(int x, int n)
